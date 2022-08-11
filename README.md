@@ -2,7 +2,7 @@
 
 # Date: 8/10/2022
 
-## By: Jennifer Griffin / Cedric Mun / Josh Langner / Jackson McHugh
+## By: Jennifer Griffin [GitHub](https://github.com/jengriffin) [LinkedIn](https://www.linkedin.com/in/jennifer-griffin-12/)/ Cedric Mun / Josh Langner / Jackson McHugh
 
 ---
 
