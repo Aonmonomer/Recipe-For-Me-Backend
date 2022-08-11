@@ -34,6 +34,7 @@
 
 ![ERD](ERD.png)
 ![ComponentDiagram](ComponentDiagram.png)
+![Logo](Recipes_For_Me_Logo.png)
 
 ---
 
