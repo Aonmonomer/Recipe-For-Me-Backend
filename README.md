@@ -1,4 +1,4 @@
-# Recipe-For-Me-Backend
+# Recipe-For-Me-Api
 
 # Date: 8/10/2022
 
