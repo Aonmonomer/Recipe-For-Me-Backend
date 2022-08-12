@@ -1,4 +1,4 @@
-const { Recipe, User, Category } = require('../models')
+const { Recipe } = require('../models')
 
 const FindAllRecipes = async (req, res) => {
   let allRecipes = await Recipe.findAll()
@@ -9,7 +9,7 @@ const FindByCategory = async (req, res) => {
   let catId = parseInt(req.params.category_id)
   console.log(req.params)
   let recipeByCategory = await Recipe.findAll({
-    where: { id: catId }
+    where: { categoryId: catId }
   })
 
   res.send(recipeByCategory)
