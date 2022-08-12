@@ -1,11 +1,11 @@
 const { Recipe, User, Category } = require('../models')
 
-const findAllRecipes = async (req, res) => {
+const FindAllRecipes = async (req, res) => {
   let allRecipes = await Recipe.findAll()
   res.send(allRecipes)
 }
 
-const createRecipe = async (req, res) => {
+const CreateRecipe = async (req, res) => {
   let newRecipeBody = {
     ...req.body
   }
@@ -13,7 +13,15 @@ const createRecipe = async (req, res) => {
   res.send(newRecipe)
 }
 
+const DeleteRecipe = async (req, res) => {
+  let recipeId = parseInt(req.params.recipe_id)
+  await Recipe.destroy({
+    where: { id: recipeId }
+  })
+  res.send({ message: `You deleted the recipe with id ${recipeId}` })
+}
 module.exports = {
-  findAllRecipes,
-  createRecipe
+  FindAllRecipes,
+  CreateRecipe,
+  DeleteRecipe
 }
