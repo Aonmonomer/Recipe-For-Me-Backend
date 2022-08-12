@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Category.belongsTo(models.Recipe, { foreignKey: 'categoryId' })
     }
   }
   Category.init(
@@ -19,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     {
       sequelize,
       modelName: 'Category',
-      tableName: 'category'
+      tableName: 'categories'
     }
   )
   return Category

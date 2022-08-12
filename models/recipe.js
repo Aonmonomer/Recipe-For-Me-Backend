@@ -9,6 +9,8 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
+      Recipe.belongsTo(models.User, { foreignKey: 'userId' })
+      Recipe.hasOne(models.Category, { foreignKey: 'categoryId' })
     }
   }
   Recipe.init(
@@ -17,13 +19,27 @@ module.exports = (sequelize, DataTypes) => {
       image: DataTypes.STRING,
       ingredients: DataTypes.STRING,
       directions: DataTypes.STRING,
-      categoryId: DataTypes.INTEGER,
-      userId: DataTypes.INTEGER
+      categoryId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'categories',
+          key: 'id'
+        }
+      },
+      userId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      }
     },
     {
       sequelize,
       modelName: 'Recipe',
-      tableName: 'recipe'
+      tableName: 'recipes'
     }
   )
   return Recipe
