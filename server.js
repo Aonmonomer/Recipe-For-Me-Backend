@@ -10,7 +10,7 @@ app.use(express.json())
 app.use(logger('dev'))
 
 app.get('/', (req, res) => {
-  res.send('I AM ROOT!')
+  res.send('I AM THE ROOT DIRECTORY HEAR ME ROAR!')
 })
 
 app.listen(PORT, () => {
