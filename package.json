@@ -11,7 +11,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "build": "npm install && npx sequelize-cli db:migrate"
   },
   "name": "recipe-for-me-backend",
   "description": "# Date: 8/10/2022",

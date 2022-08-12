@@ -40,9 +40,9 @@
 
 ---
 
-![ERD](ERD.png)
-![ComponentDiagram](ComponentDiagram.png)
-![Logo](Recipes_For_Me_Logo.png)
+![ERD](./Images/Screen%20Shot%202022-08-11%20at%203.55.01%20PM.png)
+![ComponentDiagram](./Images/ComponentDiagram.png)
+![Logo](./Images/Recipes_For_Me_Logo.png)
 
 ---
 
