@@ -1,6 +1,6 @@
 {
   "development": {
-    "database": "recipes_for_me_development",
+    "database": "recipes_for_me",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
