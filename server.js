@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
   res.send('I am still alive over here!')
 })
 app.use('/api', AppRouter2)
+
 app.listen(PORT, () => {
   console.log(`Express is ALIVE on ${PORT}!!!`)
 })
