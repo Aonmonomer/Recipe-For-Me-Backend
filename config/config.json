@@ -1,0 +1,17 @@
+{
+  "development": {
+    "database": "recipes_for_me",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "database": "recipes_for_metest",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "production": {
+    "database": "recipes_for_me_production",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  }
+}
