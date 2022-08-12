@@ -6,12 +6,12 @@ const FindAllRecipes = async (req, res) => {
 }
 
 const FindByCategory = async (req, res) => {
-  let categoryId = parseInt(req.params.user_Id)
+  let catId = parseInt(req.params.category_id)
+  console.log(req.params)
   let recipeByCategory = await Recipe.findAll({
-    where: {
-      categoryId: categoryId
-    }
+    where: { id: catId }
   })
+
   res.send(recipeByCategory)
 }
 
