@@ -22,14 +22,6 @@ const CreateUser = async (req, res) => {
   }
 }
 
-// const createRecipe = async (req, res) => {
-//   let newRecipeBody = {
-//     ...req.body
-//   }
-//   let newRecipe = await Recipe.create(newRecipeBody)
-//   res.send(newRecipe)
-// }
-
 const UpdateUser = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
