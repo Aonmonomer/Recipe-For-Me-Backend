@@ -1,6 +1,15 @@
 const { Router } = require('express')
 const { User } = require('../models')
 
+const GetAllUserDetails = async (req, res) => {
+  try {
+    const allUsers = await User.findAll()
+    res.send(allUsers)
+  } catch (error) {
+    throw error
+  }
+}
+
 const GetUserDetails = async (req, res) => {
   try {
     const user = await User.findByPk(req.params.user_id)
@@ -47,6 +56,7 @@ const DeleteUser = async (req, res) => {
 
 // Dont forget to export your functions
 module.exports = {
+  GetAllUserDetails,
   GetUserDetails,
   CreateUser,
   UpdateUser,
