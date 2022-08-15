@@ -15,6 +15,14 @@ const FindByCategory = async (req, res) => {
   res.send(recipeByCategory)
 }
 
+const FindOneRecipe = async (req, res) => {
+  let recipeId = parseInt(req.params.recipe_id)
+  let selectedRecipe = await Recipe.findOne({
+    where: { id: recipeId }
+  })
+  res.send(selectedRecipe)
+}
+
 const CreateRecipe = async (req, res) => {
   let newRecipeBody = {
     ...req.body
@@ -43,6 +51,7 @@ const UpdateRecipe = async (req, res) => {
 module.exports = {
   FindAllRecipes,
   FindByCategory,
+  FindOneRecipe,
   CreateRecipe,
   DeleteRecipe,
   UpdateRecipe
