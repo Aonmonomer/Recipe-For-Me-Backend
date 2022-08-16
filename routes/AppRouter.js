@@ -5,6 +5,6 @@ const CatRouter = require('./CategoryRouter')
 
 Router.use('/recipes', RecipeRouter)
 Router.use('/users', UserRouter)
-Router.use('/categoies', CatRouter)
+Router.use('/categories', CatRouter)
 
 module.exports = Router
