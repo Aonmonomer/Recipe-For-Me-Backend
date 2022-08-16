@@ -17,8 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     {
       title: DataTypes.STRING,
       image: DataTypes.STRING,
-      ingredients: DataTypes.STRING,
-      directions: DataTypes.STRING,
+      ingredients: DataTypes.TEXT,
+      directions: DataTypes.TEXT,
       categoryId: {
         type: DataTypes.INTEGER,
         onDelete: 'CASCADE',
