@@ -13,7 +13,7 @@ app.use(logger('dev'))
 app.use(express.urlencoded({ extended: true }))
 
 app.get('/', (req, res) => {
-  res.send('I am still alive over here!')
+  res.send('I am still alive over here!!')
 })
 app.use('/api', AppRouter)
 app.use('/auth', AuthRouter)
