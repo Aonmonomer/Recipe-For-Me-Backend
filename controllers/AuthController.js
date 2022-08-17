@@ -13,7 +13,7 @@ const Login = async (req, res) => {
       (await middleware.comparePassword(user.passwordDigest, req.body.password))
     ) {
       let payload = { id: user.id, email: user.email }
-
+      console.log(payload)
       let token = middleware.createToken(payload)
       return res.send({ user: payload, token })
     }
